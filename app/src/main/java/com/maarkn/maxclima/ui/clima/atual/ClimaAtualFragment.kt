@@ -27,6 +27,9 @@ class ClimaAtualFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ClimaAtualViewModel::class.java)
+
+        // Preciso retornar uma LivaData para poder usar padrão Observer
+        viewModel.getAlldata().observe
         // TODO: Use the ViewModel
     }
 
